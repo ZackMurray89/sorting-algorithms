@@ -97,22 +97,54 @@ export function* insertionSortGenerator(array: number[]) {
        * The original `array[j]` value is essentially moved to
        * `array[j + 1] `
        *
-       * NOTE:
+       * NOTE: The commented out `array[j + 1] = array[j]` is the
+       * classic way to write this shift of the elements but
+       * `[array[j], array[j + 1]] = [array[j + 1], array[j]]`
+       * is a swap that is actually happening if you trace the code.
+       * It means the actual value  of `array[j]` moves to `j + 1` and
+       * the value is the placed where the value of `j + 1` previously
+       * was. In a strict Insertion Sort, you'd move `array[j]` to
+       * `array[j + 1]` then decrement `j` opening up room for `value`.
+       * The current swap implementation is a slight variation to visually
+       * show the shifting
        */
       [array[j], array[j + 1]] = [array[j + 1], array[j]];
-      // array[j + 1] = array[j]
+      //* array[j + 1] = array[j]
+
+      /**
+       * Decrement `j` to move to the previous element in the sorted
+       * subarray.
+       */
       j--;
     }
 
+    /**
+     * After the `while` loop `j` is either -1 (if `value` is the
+     * smallest) or points to an element less than or equal to
+     * `value`. Therefore, `j + 1` is the correct place to insert
+     * `value`. Yield this final poistion before inserting.
+     */
     yield [[j + 1], []] as [number[], number[]];
 
+    /**
+     * Place the `value` into its correct sorted poisition.
+     */
     array[j + 1] = value;
   }
 
+  /**
+   * Final Yield: Once the sorting is complete, yield the start that
+   * shows all of the sorted elements. `[]` means that there are no
+   * active comparisons, and the second array contains all indices,
+   * signfying completion of the process.
+   */
   yield [[], Array.from({ length: array.length }, (_, i) => i)] as [
     number[],
     number[],
   ];
 
+  /**
+   * Return the sorted array.
+   */
   return array;
 }

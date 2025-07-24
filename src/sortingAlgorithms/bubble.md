@@ -15,7 +15,7 @@ acceptable) choice:
      array manipulation are clearly showcased
 
    - **Teaching algorithm analysis:** It's a perfect example to illustrate concepts like best-case,
-     worst-case, and average-case time complexity (O(n2) for most cases, O(n) in the best
+     worst-case, and average-case time complexity (_O(n^2^)_ for most cases, _O(n)_ in the best
      case for the optimized version).
 
 2. **When Simplicity and Ease of Implementation Outweigh Performance:**
@@ -33,7 +33,7 @@ acceptable) choice:
 3. **To Prove an Array is Nearly Sorted (with Optimization):**
 
    - The optimized `bubbleSortGenerator` provided in the example code, which includes the `swapped` flag,
-     has the best-case time complexity of O(n). If you ahve a storng suspicion that na array is
+     has the best-case time complexity of _O(n)_. If you ahve a storng suspicion that na array is
      **almost entirely sorted** (i.e., only a few elements are out of place), one pass of an optimized
      Bubble Sort can quicly verify this. If no swaps occur, you know it's sorted without needing
      further processing. However, even in this scenario, other algorithms like Insertion Sort often
@@ -56,4 +56,4 @@ acceptable) choice:
 
 - When performance is a key requirement: For most practical scenarios, algorithms like Merge
   Sort, Quick Sort, or Heap Sort (with complixities of O(n log n)) are vastly superior. For specific
-  cases like nearly sorted data, Insertion Sort or TimSort (used by Puthon and Java) are better.
+  cases like nearly sorted data, Insertion Sort or TimSort (used primarily by Puthon and Java) are better.
