@@ -1,69 +1,43 @@
-# React + TypeScript + Vite
+# Sorting Algorithm Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Represented Algorithms
 
-Currently, two official plugins are available:
+- Bubble Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
+- Selection Sort
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Items To Add**
 
-## Expanding the ESLint configuration
+_Beginner_
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Shell Sort
+- Cocktail Shaker Sort (a.k.a. Bidirectional Bubble Sort)
+- Gnome Sort
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+_Intermediate_
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Heap Sort
+- TimSort
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+_Advanced_
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Radix Sort (non-comparative)
+- Counting Sort (non-comparative)
+- Bucket Sort
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+_Esoteric_
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Bogo Sort
+- Sleep Sort
+
+## Possible Additions
+
+- GSAP Powered Animations
+- Step-By-Step with Pause/Play Options
+- Tooltips/Highlights
+- Psuedocode
+- Multiple Languages
+- Code Editor For Practice
+- Interactive Quizzes

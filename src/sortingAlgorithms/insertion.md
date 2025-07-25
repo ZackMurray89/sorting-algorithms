@@ -60,3 +60,11 @@ you may sort a hand of playing cards.
    algorithms use Insertion Sort for subarrays below a certain size threshold because Insertion
    Sort becomes more effecient than the recursive overhead of other algorithms like Merge Sort
    or Quick Sort on small portions.
+
+## When Not To Use Insertion Sort
+
+1. **Large Randomly Ordered Datasets:** For large arrays with elements in a random order, Insertion
+   Sorts _O(n^2^)_ complexity will lead to very poor performance.
+
+2. **When Performance On Unsorted Data Is Critical:** If you consistently need to sort large and
+   highly unsorted arrays opt for a differenct algorithm like Quick Sort, Merge Sort or Heap Sort.
